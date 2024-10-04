@@ -20,6 +20,10 @@
           path = ./templates/corepack;
           description = "nix flake new -t github:turtton/flake-templates#corepack";
         };
+        esp32-idf = {
+          path = ./templates/esp32-idf;
+          description = "nix flake new -t github:turtton/flake-templates#esp32-idf";
+        };
       };
     };
 }
