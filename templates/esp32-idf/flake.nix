@@ -41,17 +41,17 @@
           ldproxy
         ];
         profile = ''
-          				export LIBCLANG_PATH="${idf-rust}/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-17.0.1_20240419/esp-clang/lib"
-          				export PATH="${idf-rust}/.rustup/toolchains/esp/bin:$PATH"
-          				export PATH="${idf-rust}/.rustup/toolchains/esp/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin:$PATH"
-                  export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-          			'';
+          					export LIBCLANG_PATH="${idf-rust}/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-17.0.1_20240419/esp-clang/lib"
+          					export PATH="${idf-rust}/.rustup/toolchains/esp/bin:$PATH"
+          					export PATH="${idf-rust}/.rustup/toolchains/esp/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin:$PATH"
+          					export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+        '';
       };
     in
     {
       devShells.${pkgs.system} = {
         default = fhs.env;
-        flush = pkgs.mkShell {
+        flash = pkgs.mkShell {
           packages = [
             pkgs.espflash
             pkgs.cargo-generate
