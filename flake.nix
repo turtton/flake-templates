@@ -24,6 +24,10 @@
           path = ./templates/esp32-idf;
           description = "nix flake new -t github:turtton/flake-templates#esp32-idf";
         };
+        rust = {
+          path = ./templates/rust;
+          description = "nix flake new -t github:turtton/flake-templates#rust";
+        };
       };
     };
 }
