@@ -28,6 +28,10 @@
           path = ./templates/rust;
           description = "nix flake new -t github:turtton/flake-templates#rust";
         };
+        otomedomain = {
+          path = ./templates/otomedomain;
+          description = "nix flake new -t github:turtton/flake-templates#otomedomain";
+        };
       };
     };
 }
