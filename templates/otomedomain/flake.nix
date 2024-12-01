@@ -20,6 +20,7 @@
           packages = with pkgs;  [
             bashInteractive
             wineWowPackages.wayland
+            winetricks
           ];
           shellHook = ''
             						export WINEPREFIX=$(readlink -f ./.wine);
